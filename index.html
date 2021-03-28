@@ -5,26 +5,19 @@
     <title>Flight Events</title>
 </head>
 <body>
-    <h1 id="timer"></h1>
+    <h1 id="timer">Redirecting in 5 seconds.. Please Stand by</h1>
 
     <script>
-        // 5 seconds, set to 6 just in case of lag or something
+        // 5 seconds
         // change this to any time you want
-        var countDown = 6;
-        var dateObj = new Date(new Date()).getSeconds() + 6;
-        var x = setInterval(() => {
-            var dist = dateObj - new Date().getSeconds();
-            // Subtracting -
-            
-            if ((dist - 1) >= 0) {
-                document.getElementById("timer").innerHTML = "Redirecting in " + dist - 1; + " seconds..."
-            }
-            else if (dist < 0) {
-                clearInterval(x);
-            }
-        }, 1000);
-        // redirects to my callsign. change this to yours
-        window.location.replace("https://events.flighttracker.tech/?myCallsign=NE123")
+        setTimeout(() => {
+            // redirects to my callsign. change this to yours
+            window.location.replace("https://events.flighttracker.tech/?myCallsign=NE123")
+        }, 5000);
+       
+        
     </script>
+
+    <footer>Created by okistuff : MIT License</footer>
 </body>
 </html>
